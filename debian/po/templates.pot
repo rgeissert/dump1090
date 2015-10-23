@@ -1,0 +1,650 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the  package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: oliver@mutability.co.uk\n"
+"POT-Creation-Date: 2015-10-23 21:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Description
+#: ../dump1090-mutability.templates:1001
+msgid "Start dump1090 automatically?"
+msgstr ""
+
+#. Description
+#: ../dump1090-mutability.templates:1001
+msgid ""
+"dump1090 can be started automatically via an init-script. Otherwise, the "
+"init-script does nothing; you must run dump1090 by hand."
+msgstr ""
+
+#. Description
+#: ../dump1090-mutability.templates:1001
+msgid ""
+"You can modify the options used when automatically starting dump1090 by "
+"running \"dpkg-reconfigure dump1090-mutability\" as root, or by editing /etc/"
+"default/dump1090-mutability."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:2001
+msgid "User to run dump1090 as:"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:2001
+msgid ""
+"When started automatically, dump1090 runs as an unprivileged system user.  "
+"This user will be created if it does not yet exist."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:3001
+msgid "Path to log to:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:3001
+msgid ""
+"When started automatically, dump1090 will log its output somewhere. This log "
+"will contain any startup errors, and periodic statistics reports."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:4001
+msgid "RTL-SDR dongle to use:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:4001
+msgid "If you have only one dongle connected, you can leave this blank."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:4001
+msgid ""
+"Otherwise, you can provide the serial number (more reliable) or device index "
+"(first device = 0, but the ordering is unpredictable) to choose a particular "
+"dongle to use."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:4001
+msgid ""
+"To run dump1090 in \"net only\" mode, specify the literal word \"none\"."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:5001
+msgid "RTL-SDR gain, in dB:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:5001
+msgid ""
+"The tuner gain used by dump1090 can be provided as a value in dB, or \"max\" "
+"to use the maximum gain available, or \"agc\" to use the tuner's AGC to "
+"control the gain. If unsure, choose \"max\"."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:6001
+msgid "RTL-SDR frequency correction, in PPM:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:6001
+msgid ""
+"The oscillator in each RTL-SDL dongle is not perfectly accurate. You can "
+"choose a correction factor, in parts-per-million, to correct for this. The "
+"correction factor varies from dongle to dongle, and also varies with "
+"operating temperature. You can find a suitable value with \"rtl_test -p\" or "
+"\"kalibrate\". If you don't know the value for your dongle, choose 0."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:7001
+msgid "Enable oversampling at 2.4MHz?"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:7001
+msgid ""
+"Originally, dump1090 would decode incoming signals by sampling at 2MHz. "
+"Newer versions also support sampling at 2.4MHz. This may increase the number "
+"of decodable messages, but takes slightly more CPU and is not as well tested."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:8001
+msgid "Fix detected CRC errors?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:8001
+msgid ""
+"dump1090 can fix unambiguous single-bit CRC errors detected in received "
+"messages. This allows weaker messages to be decoded. It can slightly "
+"increase the rate of undetected errors, but this is not usually significant."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:9001
+msgid "Apply phase enhancement?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:9001
+msgid ""
+"dump1090 can attempt to correct for messages that are received out-of-phase "
+"from the sampling rate, at the expense of taking more CPU."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:10001
+msgid "Aggressively fix more errors?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:10001
+msgid ""
+"dump1090 can apply more aggressive corrections to received messages, "
+"primarily correcting two-bit CRC errors."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:10001
+msgid ""
+"Use with caution! This can significantly increase the rate of undetected "
+"message errors (i.e. increase the rate of garbled decoded messages)"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:11001
+msgid "Latitude of receiver, in decimal degrees:"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:11001
+#: ../dump1090-mutability.templates:12001
+msgid ""
+"If the location of the receiver is provided, dump1090 can do local position "
+"decoding in cases where insufficient position messages are received for "
+"unambiguous global position decoding."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:12001
+msgid "Longitude of receiver, in decimal degrees:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:13001
+msgid "Absolute maximum range of receiver, in nautical miles:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:13001
+msgid ""
+"If the maximum range of the receiver is provided, dump1090 can filter out "
+"impossible position reports that are due to aircraft that transmit bad data."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:13001
+msgid ""
+"Additionally, if the maximum range is larger than 180NM, when local position "
+"decoding is used (when insufficient position messages have been received for "
+"global position decoding), it is limited to only those positions that would "
+"unambiguously decode to a single position within the given receiver range."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:13001
+msgid ""
+"This range should be the absolute maximum range - any position data from "
+"further away will be entirely discarded!"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:14001
+msgid "Port for internal webserver (0 disables):"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:14001
+msgid ""
+"dump1090 can provide an internal webserver that serves a basic \"virtual "
+"radar\" map."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:14001
+msgid ""
+"It is generally a better idea to use an external webserver, but if you "
+"really want to use the internal one, you can select a port to listen on here."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:15001
+msgid "Port for AVR-format input connections (0 disables):"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:15001
+msgid ""
+"dump1090 can accept connections to receive data from other sources in  "
+"several formats. This setting controls the port dump1090 will listen on for "
+"AVR (\"raw\") format input connections."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:16001
+msgid "Port for AVR-format output connections (0 disables):"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:16001
+msgid ""
+"dump1090 can forward ADS-B messages to other software in several formats. "
+"This setting controls the port dump1090 will listen on for AVR (\"raw\") "
+"format output connections."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:17001
+msgid "Port for Beast-format input connections (0 disables):"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:17001
+msgid ""
+"dump1090 can accept connections to receive data from other sources in  "
+"several formats. This setting controls the port dump1090 will listen on for "
+"Beast (\"binary\") format input connections."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:18001
+msgid "Port for Beast-format output connections (0 disables):"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:18001
+msgid ""
+"dump1090 can forward ADS-B messages to other software in several formats. "
+"This setting controls the port dump1090 will listen on for Beast (\"binary"
+"\") format output connections."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:19001
+msgid "Port for SBS-format output connections (0 disables):"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:19001
+msgid ""
+"dump1090 can forward ADS-B messages to other software in several formats. "
+"This setting controls the port dump1090 will listen on for SBS BaseStation "
+"format output connections."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:20001
+msgid "Port for FATSV-format output connections (0 disables):"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:20001
+msgid ""
+"dump1090 can forward ADS-B messages to other software in several formats. "
+"This setting controls the port dump1090 will listen on for FlightAware TSV "
+"format output connections."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:21001
+msgid "Seconds between heartbeat messages (0 disables):"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:21001
+msgid ""
+"If there is no other data sent on a network connection, dump1090 can "
+"periodically send an empty heartbeat message to ensure that the connection "
+"stays established. This setting controls the interval betweeen heartbeat "
+"messages."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:22001
+msgid "Minimum output message size:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:22001
+msgid ""
+"To avoid sending many small network messages, output connections will "
+"accumulate data waiting to be sent until either a minimum size is reached or "
+"a maximum delay is reached. This setting controls the minimum size, in bytes."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:23001
+msgid "Maximum output buffering time:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:23001
+msgid ""
+"To avoid sending many small network messages, output connections will buffer "
+"data waiting to be sent until either a minimum size is reached or a maximum "
+"delay is reached. This setting controls the maximum delay, in seconds."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:24001
+msgid "SO_SNDBUF size:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:24001
+msgid ""
+"Here you can specify the TCP send buffer size to use on network connections."
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../dump1090-mutability.templates:25001
+msgid "Interface address to bind to (blank for all interfaces):"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../dump1090-mutability.templates:25001
+msgid ""
+"If you want to limit incoming connections to a particular interface, specify "
+"the interface address here. A blank value will bind to the wildcard address, "
+"allowing connections on all interfaces."
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../dump1090-mutability.templates:25001
+msgid ""
+"The default value of 127.0.0.1 will allow connections only on localhost, i."
+"e. only connections that originate on the same machine."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:26001
+msgid "Interval between logging stats, in seconds:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:26001
+msgid ""
+"dump1090 will periodically log message reception stats to its logfile. This "
+"setting controls how often that is done."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:27001
+msgid "Directory to write JSON aircraft state to:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:27001
+msgid ""
+"As this can be written frequently, you should select a location that is not "
+"on a sdcard. The default path under /run is on tmpfs and will not write to "
+"the sdcard."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:27001
+msgid "A blank path disables writing JSON state."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:28001
+msgid "Interval between writing JSON aircraft state, in seconds:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:28001
+msgid ""
+"dump1090 periodically write a list of aircraft, in JSON format, for use by "
+"the virtual radar view when using an external webserver. This setting "
+"controls the directory to write to."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:28001
+msgid ""
+"Here you can control how often the JSON state is updated, which determines "
+"how frequently the virtual radar view updates."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:29001
+msgid "Receiver location accuracy to show in the web interface:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:29001
+msgid ""
+"dump1090 can provide the configured receiver location to the web map, so "
+"that the map can show distances from the receiver."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:29001
+msgid ""
+"For privacy reasons, if you are making the map publicly available you may "
+"not want to show the exact location of the receiver. There are three options "
+"available to control what is shown:"
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:29001
+msgid ""
+"approximate: dump1090 will provide the receiver location rounded to the\n"
+"  nearest 0.01 degree of latitude and longitude. This gives a location\n"
+"  that is accurate to within about 0.5 - 1km."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:29001
+msgid "exact: dump1090 will provide the exact receiver location."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:29001
+msgid ""
+"none: dump1090 will not provide the receiver location at all; distance\n"
+"  display will be disabled."
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../dump1090-mutability.templates:30001
+msgid "Log all decoded messages?"
+msgstr ""
+
+#. Type: select
+#. Description
+#: ../dump1090-mutability.templates:30001
+msgid ""
+"dump1090 can log all decoded messages as text to the logfile. This can "
+"result in a very large logfile! Usually you don't need this."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:31001
+msgid "Extra arguments to pass to dump1090:"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../dump1090-mutability.templates:31001
+msgid "Here you can add any extra arguments you want to pass to dump1090."
+msgstr ""
+
+#. Type: string
+#. Description
+#: ../dump1090-mutability.templates:32001
+msgid "Value must be an unsigned integer."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:33001
+msgid "Value must be an unsigned integer, or blank."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:34001
+msgid "Value must be a positive integer."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:35001
+msgid "Value must be an integer."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:36001
+msgid "Value must be an integer, or blank."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:37001
+msgid "Value cannot be empty."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:38001
+msgid "Value must be a valid port number (1024-65535), or zero to disable."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:39001
+msgid "Value must be an IP address or empty."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:40001
+msgid "Value must be a decimal number"
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:41001
+msgid "Value must be a decimal number or empty."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:42001
+msgid "Value must be a non-negative number."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:43001
+msgid "Value must be a numeric gain value, or \"max\", or \"agc\"."
+msgstr ""
+
+#. Type: error
+#. Description
+#: ../dump1090-mutability.templates:44001
+msgid "Value must be a username (without spaces) that isn't root."
+msgstr ""
