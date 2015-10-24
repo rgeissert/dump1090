@@ -2,11 +2,14 @@
 "use strict";
 
 // Define our global variables
-var GoogleMap     = null;
-var Planes        = {};
-var PlanesOrdered = [];
-var SelectedPlane = null;
-var FollowSelected = false;
+var GoogleMap        = null;
+var HeatMap          = null;
+var HeatMapIntId     = null;
+var Planes           = {};
+var PlanesOrdered    = [];
+var PositionsHistory = [];
+var SelectedPlane    = null;
+var FollowSelected   = false;
 
 var SpecialSquawks = {
         '7500' : { cssClass: 'squawk7500', markerColor: 'rgb(255, 85, 85)', text: 'Aircraft Hijacking' },
@@ -39,6 +42,12 @@ var MessageRate = 0;
 
 var NBSP='\u00a0';
 
+function recordPosition(pos) {
+        PositionsHistory.push(pos);
+        if (PositionsHistory.length > 20000)
+                PositionsHistory.shift();
+}
+
 function processReceiverUpdate(data) {
 	// Loop through all the planes in the data packet
         var now = data.now;
@@ -60,6 +69,7 @@ function processReceiverUpdate(data) {
                 var ac = acs[j];
                 var hex = ac.hex;
                 var plane = null;
+                var prepos = null;
 
 		// Do we already have this plane object in Planes?
 		// If not make it.
@@ -93,8 +103,16 @@ function processReceiverUpdate(data) {
                         PlanesOrdered.push(plane);
 		}
 
+
+		prepos = plane.position;
 		// Call the function update
 		plane.updateData(now, ac);
+
+		if (plane.position !== null) {
+			if (prepos === null || !prepos.equals(plane.position)) {
+				recordPosition(plane.position);
+			}
+		}
 	}
 }
 
@@ -696,6 +714,12 @@ function refreshTableInfo() {
         resortTable();
 }
 
+function refreshHeatMap() {
+	if (HeatMap != null) {
+                HeatMap.set('data', PositionsHistory);
+	}
+}
+
 //
 // ---- table sorting ----
 //
@@ -834,6 +858,24 @@ function resetMap() {
 	GoogleMap.setCenter(new google.maps.LatLng(CenterLat, CenterLon));
 	
 	selectPlaneByHex(null,false);
+}
+
+function toggleHeatMap() {
+
+	if (HeatMap != null) {
+                HeatMap.setMap(null);
+                HeatMap = null;
+                window.clearInterval(HeatMapIntId);
+                return;
+	}
+
+        HeatMap = new google.maps.visualization.HeatmapLayer({
+                data: PositionsHistory,
+                map: GoogleMap,
+                radius: 7
+        });
+
+        HeatMapIntId = window.setInterval(refreshHeatMap, 5000);
 }
 
 function drawCircle(marker, distance) {
