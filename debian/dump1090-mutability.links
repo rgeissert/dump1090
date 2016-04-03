@@ -1,3 +1,4 @@
+/etc/dump1090-mutability/config.js /usr/share/dump1090-mutability/html/config.js
 /usr/share/javascript/jquery/jquery.min.js /usr/share/dump1090-mutability/html/jquery.min.js
 /usr/share/javascript/jquery-ui/jquery-ui.min.js /usr/share/dump1090-mutability/html/jquery-ui.min.js
 /usr/share/javascript/jquery-ui/css/smoothness/jquery-ui.min.css /usr/share/dump1090-mutability/html/jquery-ui.min.css

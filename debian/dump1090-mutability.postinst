@@ -50,6 +50,9 @@ subvar_yn() {
   if [ "$RET" = "true" ]; then subvar_raw "yes" "$2"; else subvar_raw "no" "$2"; fi
 }
 
+dpkg-maintscript-helper mv_conffile \
+    /usr/share/dump1090-mutability/html/config.js /etc/dump1090-mutability/config.js 1.14 dump1090-mutability -- "$@"
+
 case "$1" in
     configure)
         . /usr/share/debconf/confmodule
