@@ -26,20 +26,20 @@
 .\"TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 .\"USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.TH "VIEW1090" "1" "17 August 2014" "" "User Commands"
-.SH NAME view1090 \- Text client for dump1090
+.TH "VIEW1090-MUTABILITY" "1" "17 August 2014" "" "User Commands"
+.SH NAME view1090-mutability \- Text client for dump1090
 .SH SYNOPSIS
 .nf
 .fam C
-\fBview1090\fP
-\fBview1090\fP \fB--net-bo-ipaddr\fP \fIipaddr\fP \fB--net-bo-port\fP \fIport\fP
+\fBview1090-mutability\fP
+\fBview1090-mutability\fP \fB--net-bo-ipaddr\fP \fIipaddr\fP \fB--net-bo-port\fP \fIport\fP
 
 .fam T
 .fi
 .fam T
 .fi
 .SH DESCRIPTION
-\fBview1090\fP allows you to connect to a TCP Beast compliant stream and view
+\fBview1090-mutability\fP allows you to connect to a TCP Beast compliant stream and view
 the decoded messages in an ASCII-text table.
 .RE
 .PP
@@ -112,7 +112,7 @@ instance running on the local host.
 .PP
 .nf
 .fam C
-        view1090 
+        view1090-mutability
 
 .fam T
 .fi
@@ -121,19 +121,19 @@ host.
 .PP
 .nf
 .fam C
-        view1090 \-\-net\-bo\-ipaddr \fIipaddr\fP
+        view1090-mutability \-\-net\-bo\-ipaddr \fIipaddr\fP
 
 
 .fam T
 .fi
 .SH BUGS
 Report bugs with the program to the project's github page
-<https://github.com/MalcolmRobb/dump1090/>
+<https://github.com/mutability/dump1090/>
 
 .SH AUTHORS
 Dump1090 was originally written by Salvatore Sanfilippo <antirez@gmail.com>.
-This version is now maintained by Malcolm Robb <support@attavionics.com>.
-This was packaged for Debian by Matthew Ernisse <mernisse@ub3rgeek.net>.
+This version is now maintained by Oliver Jowett <oliver@mutability.co.uk>.
+This manpage was prepared for Debian by Matthew Ernisse <mernisse@ub3rgeek.net>.
 .RE
 .PP
 

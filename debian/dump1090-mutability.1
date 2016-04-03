@@ -26,21 +26,21 @@
 .\"TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 .\"USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.TH "DUMP1090" "1" "17 August 2014" "" "User Commands"
-.SH NAME dump1090 \- Mode-S decoder
+.TH "DUMP1090-MUTABILITY" "1" "17 August 2014" "" "User Commands"
+.SH NAME dump1090-mutability \- Mode-S decoder
 .SH SYNOPSIS
 .nf
 .fam C
-\fBdump1090\fP
-\fBdump1090\fP \fB--interactive\fP
-\fBdump1090\fP \fB--ifile\fP \fIfile\fP
+\fBdump1090-mutability\fP
+\fBdump1090-mutability\fP \fB--interactive\fP
+\fBdump1090-mutability\fP \fB--ifile\fP \fIfile\fP
 
 .fam T
 .fi
 .fam T
 .fi
 .SH DESCRIPTION
-\fBdump1090\fP receives and decodes Mode S packets using the Realtek RTL2832
+\fBdump1090-mutability\fP receives and decodes Mode S packets using the Realtek RTL2832
 software defined radio interface.  It provides the ability to decode
 multiple frame types as well as correct bit errors using the embedded
 24-bit CRC.  Results can be viewed using a text client, via the built-
@@ -255,7 +255,7 @@ Interactive mode
 .PP
 .nf
 .fam C
-        dump1090 \-\-interactive
+        dump1090-mutability \-\-interactive
 
 .fam T
 .fi
@@ -263,26 +263,26 @@ Daemon mode
 .PP
 .nf
 .fam C
-        dump1090 \-\-net \-\-quiet &
+        dump1090-mutability \-\-net \-\-quiet &
 
 .fam T
 .fi
-You can also use \fBdump1090\fP as a network hub for multiple receivers by using
+You can also use \fBdump1090-mutability\fP as a network hub for multiple receivers by using
 .PP
 .nf
 .fam C
-        dump1090 \-\-net\-only
+        dump1090-mutability \-\-net\-only
 
 .fam T
 .fi
 .SH BUGS
 Report bugs with the program to the project's github page
-<https://github.com/MalcolmRobb/dump1090/>
+<https://github.com/mutability/dump1090/>
 
 .SH AUTHORS
 Dump1090 was originally written by Salvatore Sanfilippo <antirez@gmail.com>.
-This version is now maintained by Malcolm Robb <support@attavionics.com>.
-This was packaged for Debian by Matthew Ernisse <mernisse@ub3rgeek.net>.
+This version is now maintained by Oliver Jowett <oliver@mutability.co.uk>.
+This manpage was prepared for Debian by Matthew Ernisse <mernisse@ub3rgeek.net>.
 .RE
 .PP
 
