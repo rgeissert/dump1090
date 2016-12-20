@@ -5,12 +5,12 @@ Index: mutability-dump1090/public_html/gmap.html
 ===================================================================
 --- mutability-dump1090.orig/public_html/gmap.html
 +++ mutability-dump1090/public_html/gmap.html
-@@ -13,7 +13,7 @@
- 		<script type="text/javascript" src="formatter.js"></script>
+@@ -22,7 +22,7 @@
  		<script type="text/javascript" src="flags.js"></script>
+ 		<script type="text/javascript" src="layers.js"></script>
  		<script type="text/javascript" src="script.js"></script>
 -		<script type="text/javascript" src="coolclock/excanvas.js"></script>
 +		<script type="text/javascript" src="excanvas.min.js"></script>
  		<script type="text/javascript" src="coolclock/coolclock.js"></script>
  		<script type="text/javascript" src="coolclock/moreskins.js"></script>
-         <title>DUMP1090</title>
+ 		<title>DUMP1090</title>
