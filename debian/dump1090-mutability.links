@@ -3,4 +3,4 @@
 /usr/share/javascript/jquery-ui/jquery-ui.min.js /usr/share/dump1090-mutability/html/jquery-ui.min.js
 /usr/share/javascript/jquery-ui-themes/smoothness/jquery-ui.min.css  /usr/share/dump1090-mutability/html/jquery-ui.min.css
 /usr/share/javascript/jquery-ui-themes/smoothness/images /usr/share/dump1090-mutability/html/images
-/usr/share/javascript/excanvas/excanvas.js /usr/share/dump1090-mutability/html/excanvas.js
+/usr/share/javascript/excanvas/excanvas.min.js /usr/share/dump1090-mutability/html/excanvas.min.js
