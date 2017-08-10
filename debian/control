@@ -2,16 +2,34 @@ Source: dump1090-mutability
 Section: net
 Priority: optional
 Maintainer: Oliver Jowett <oliver@mutability.co.uk>
-Build-Depends: debhelper(>=9), librtlsdr-dev, libusb-1.0-0-dev, pkg-config, apache2-dev (>= 2.4.1-1)
-Standards-Version: 3.9.6
+Uploaders:
+ Rapahel Geissert <geissert@debian.org>,
+ Matteo F. Vescovi <mfv@debian.org>
+Build-Depends:
+ apache2-dev (>= 2.4.1),
+ debhelper (>= 10),
+ librtlsdr-dev,
+ libusb-1.0-0-dev,
+ pkg-config
+Standards-Version: 4.0.0
 Homepage: https://github.com/mutability/dump1090
 Vcs-Git: https://github.com/mutability/dump1090.git
 
 Package: dump1090-mutability
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libjs-excanvas, libjs-jquery-ui, libjs-jquery-ui-theme-smoothness, adduser, lsb-base
-Recommends: python(>=2.5), lighttpd
-Provides: fatsv-data-source
+Depends:
+ adduser,
+ libjs-excanvas,
+ libjs-jquery-ui,
+ libjs-jquery-ui-theme-smoothness,
+ lsb-base,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Recommends:
+ lighttpd,
+ python (>= 2.5)
+Provides:
+ fatsv-data-source
 Description: ADS-B Ground Station System for RTL-SDR
  Networked Aviation Mode S / ADS-B decoder/translator with RTL-SDR software
  defined radio USB device support.
